@@ -12,18 +12,20 @@
     <!--FIXME: use production server-->
     <!--<script src="https://localhost:3000/socket.io/socket.io.js"></script>-->
     <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="socket.io.min.js"></script>
   </head>
   <body>
-    <h1>'Allo, 'Allo!</h1>
     <div id="speech-transcript"></div>
+    <audio id="remote-audio" autoplay controls="controls"></audio>
+    <button id="start-recording">Start</button>
+    <button id="stop-recording" disabled>Stop</button>
+    <button id="save-recording" disabled>Save</button>
     <video id="remote-video" autoplay width="640" height="480"></video>
 
     <!-- build:js scripts/popup-vendor.js -->
     <!-- bower:js -->
     <!-- endbower -->
     <!-- endbuild -->
-
-    <script src="socket.io.min.js"></script>
 
     <!-- build:js(app) scripts/popup.bundle.js -->
     <script src="scripts/popup.bundle.js"></script>
